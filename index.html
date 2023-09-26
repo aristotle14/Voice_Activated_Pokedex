@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Controlled Pokémon</title>
+    <link rel="stylesheet" href="CSS/design.css">
+</head>
+
+<body>
+
+    <!--BASE-->
+
+    <div class="container">
+        <button onmouseup="on_overlayQuestion()" class="helpButton">?</button>
+        <div class="content">
+            <img src="IMG/pokemon.svg" alt="logo" width="700px">
+        </div>
+    </div>
+
+
+    <!--    Poke Overlay-->
+
+    <div id="overlayPokecard" onmouseup="off_overlayPokecard()">
+        <div class="overlayBox">
+            <div class="PokeCard">
+
+                <div class="top">
+                    <div class="topContainer"></div>
+                </div>
+
+                <div class="mid">
+                    <img id="pokeImg" src="about:blank" />
+                </div>
+
+                <div class="bottom">
+                    <div class="bottomContainer">
+                        <div class="hold">
+                            <div class="title">Type</div>
+                            <div class="type"></div>
+                        </div>
+
+                        <div class="hold">
+                            <div class= "title">Height</div>
+                            <div class="height"></div>
+                        </div>
+
+                        <div class="hold">
+                            <div class="title">Ability</div>
+                            <div class="ability"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--QUESTION OVERLAY-->
+
+    <div id="overlayQuestion" onmouseup="off_overlayQuestion()">
+        <div class="overlayBox">
+            <div class="overlayBoxTxt">
+                <p>Click</p>
+                <p><b>Pokémon Logo</b></p>
+            </div>
+            <div class="overlayBoxTxt">
+                <p>Say Pokémon name</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Mic Enable-->
+
+    <div id="micEnable" onmouseup="off_micEnable()">
+        <div class="overlayBox">
+            <img src="IMG/mic.svg" alt="Mic" height="400px">
+            <div class="overlayBoxTxt">Enable Mic</div>
+        </div>
+    </div>
+
+    <!--Error Enable-->
+
+    <div id="overlayError" onmouseup="off_overlayError()">
+        <div class="overlayBox">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/190.png" alt="Error" height="500px">
+            <div class="overlayBoxTxt">Pokémon not recognised</div>
+        </div>
+    </div>
+
+
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
